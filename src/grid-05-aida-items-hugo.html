@@ -51,6 +51,20 @@
       align-self: start;
       border-right: 1px solid gray;
       border-left: 1px solid gray;
+      position: relative;
+
+      &::after {
+        border-right: 1px solid gray;
+        border-left: 1px solid gray;
+        content: "";
+        display: block;
+        position: absolute;
+        min-height: 100px;
+        top: 0;
+        left: -1px;
+        right: -1px;
+        z-index: -1;    
+      }
     }
 
     .tariff-item__button {
@@ -192,7 +206,6 @@
       </div>
       <div class="tariff-item__price">
         <p class="price">1.580 €</p>
-        <p>&nbsp;</p>
       </div>
       <div class="tariff-item__button">
         <button class="tariff-item__essentials-button">
@@ -369,3 +382,4 @@
   
 </body>
 </html>
+ 
