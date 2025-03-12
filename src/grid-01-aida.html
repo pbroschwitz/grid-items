@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" class="sm:scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy</title>
+  <meta name="description" content="Some description on privacy page" />
+  <link rel="icon" type="image/png" href="/img/favicon.svg">
+  <style>
+    /* Grid styles */
+    .tariffs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-rows: minmax(80px, auto) minmax(80px, auto) minmax(80px, auto) minmax(80px, auto) minmax(150px, fit-content);
+      grid-auto-flow: row;
+      
+      grid-column-gap: 1.25rem;
+      grid-row-gap: 0;
+
+      margin-inline: auto;
+
+      container-type: inline-size;
+
+      @container (width >= calc(100px * 2 + 1rem)) {
+        .item {
+          grid-column: span 2;
+        }
+      }
+
+      /* @container (calc(100px * 4 + 3rem) < width < calc(100px * 6 + 5rem) ) {
+        .item:last-child:nth-child(odd) {
+          grid-column: 2 / span 2;
+        }
+      }
+
+      @container (calc(100px * 6 + 5rem) < width < calc(100px * 8 + 7rem)) {
+        .item:nth-child(3n + 4):last-child {
+          grid-column: 3 / 5;
+        }
+
+        &:has(:nth-child(3n + 5):last-child) > :nth-last-child(2) {
+          grid-column: 2 / 4;
+        }
+      }
+
+      @container (calc(100px * 8 + 7rem) < width < calc(100px * 10 + 9rem)) {
+        .item:nth-child(4n + 5):last-child {
+          grid-column: 4 / 6;
+        }
+
+        &:has(:nth-child(4n + 6):last-child) > :nth-last-child(2) {
+          grid-column: 3 / 5;
+        }
+
+        &:has(:nth-child(4n + 7):last-child) > :nth-last-child(3) {
+          grid-column: 2 / 4;
+        }
+      } */
+    }
+
+    .tariff-item {
+      display: grid;
+      grid-row: 1 / 5;
+      grid-template-rows: subgrid;
+    }
+  </style>
+
+  <style>
+    /* Demo styles */
+    body {
+      margin: 0;     
+      padding: 40px;
+    }
+
+    .tariffs {
+      max-width: 1214px;
+      outline: 1px dotted moccasin;
+    }
+
+    .tariff-item__essentials {
+      background-color: #f4f9fe;
+      border: 1px solid gray;
+      border-bottom: 0 none;
+      padding: 24px;
+    }
+
+    .tariff-item__benefits {
+      background-color: #f4f9fe;
+      border: 1px solid gray;
+      border-top: 0 none;
+      padding: 24px;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 0.8888888889rem;
+      font-size: .88889rem;
+      line-height: 1.33333rem;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      padding: .55556rem .77778rem;
+      border-style: solid;
+      border-width: 2px;
+      color: #fff;
+      display: inline-flex;
+      transition: all .3s ease;
+      background-color: #0094ca;
+      border-color: #0094ca;
+    }
+  </style>
+  <script type="module" defer src="/js/scripts.js"></script>
+</head>
+<body class="meta-page">
+  <div class="tariffs">
+    <div class="tariff-item">
+      <header class="tariff-item__text">
+        <h3 class="heading">Essentials</h3>
+        <p class="description">For the solo entrepreneur and small teams</p>
+      </header>
+      <header class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </header>
+      <footer class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </footer>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tariff-item">
+      <header class="tariff-item__text">
+        <h3 class="heading">Essentials</h3>
+        <p class="description">For the solo entrepreneur</p>
+      </header>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <footer class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </footer>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+            <li>
+              Benefit 4
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tariff-item">
+      <header class="tariff-item__text">
+        <h3 class="heading">Essentials</h3>
+        <p class="description">For the solo entrepreneur</p>
+      </header>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <footer class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </footer>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+            <li>
+              Benefit 4
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tariff-item">
+      <header class="tariff-item__text">
+        <h3 class="heading">Essentials</h3>
+        <p class="description">For the solo entrepreneur</p>
+      </header>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <footer class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </footer>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+            <li>
+              Benefit 4
+            </li>
+            <li>
+              Benefit 5
+            </li>
+            <li>
+              Benefit 6
+            </li>
+            <li>
+              Benefit 7
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
