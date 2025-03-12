@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en" class="sm:scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <meta name="description" content="Some description on index page" />
+  <link rel="icon" type="image/png" href="/img/favicon.svg">
+  <link href="/css/styles.css" rel="stylesheet">
+  <style data-purpose="grid-styles">
+    .tariffs {
+      display: grid;
+      grid-column-gap: 2rem;
+      grid-template-columns: 1fr;
+      
+      max-width: var(--grid-width);
+    }
+
+    @media (min-width: 756px) {
+      .tariffs--1-items {
+        grid-template-columns: repeat(1, minmax(264px, 1152px));
+      }
+    }
+
+    @media (min-width: 756px) {
+      .tariffs--2-items {
+        grid-template-columns: repeat(2, minmax(264px, 560px));
+      }
+    }
+
+    @media (min-width: 952px) {
+      .tariffs--3-items {
+        grid-template-columns: repeat(3, minmax(264px, 363px));
+      }
+    }
+
+    @media (min-width: 1248px) {
+      .tariffs--4-items {
+        grid-template-columns: repeat(4, 264px);
+      }
+    }
+
+    .tariff-item {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 4;
+    }
+
+    .tariff-item__text {
+      border: 1px solid #DBDEE7;
+      border-bottom: 0 none;
+    }
+
+    .tariff-item__price {
+      align-self: start;
+      border-right: 1px solid #DBDEE7;
+      border-left: 1px solid #DBDEE7;
+    }
+
+    .tariff-item__button {
+      border-right: 1px solid #DBDEE7;
+      border-left: 1px solid #DBDEE7;
+    }
+  </style>
+  <style data-purpose="demo-styles">
+    html {
+      color-scheme: light;
+    }
+
+    body {
+      margin: 0;     
+      padding: 40px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .tariffs {
+      margin-inline: auto;
+      margin-block: 6rem;
+    }
+
+    .tariff-item {
+      margin-block: 1rem;
+    }
+
+    .tariff-item__essentials {
+      background-color: #f4f9fe;
+      border: 1px solid #DBDEE7;
+      border-bottom: 0 none;
+      padding: 24px;
+    }
+
+    .tariff-item__benefits {
+      background-color: #f4f9fe;
+      border: 1px solid #DBDEE7;
+      border-top: 0 none;
+      padding: 24px;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      font-size: .88889rem;
+      line-height: 1.33333rem;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      padding: .55556rem .77778rem;
+      border-style: solid;
+      border-width: 2px;
+      color: #fff;
+      display: inline-flex;
+      transition: all .3s ease;
+      background-color: #0094ca;
+      border-color: #0094ca;
+    }
+
+    .tariff-item__text {
+      padding-block: 16px;
+      padding-inline: 24px;
+    }
+    
+    .tariff-item__price {
+      padding-block: 16px;
+      padding-inline: 24px;
+    }
+    
+    .tariff-item__button {
+      padding-block: 16px;
+      padding-inline: 24px;
+    }
+
+    .tariff-item__additionals {
+      border-top: 1px solid #DBDEE7;
+    }
+  </style>
+</head>
+<body>
+  <!-- inspired by https://ryanmulligan.dev/blog/grid-stacks/ and https://www.youtube.com/watch?v=HvhSEsFEsAg -->
+  <div class="tariffs tariffs--4-items">
+    <div class="tariff-item">
+      <div class="tariff-item__text">
+        <h3 class="heading">Essentials</h3>
+        <p class="description">For the solo entrepreneur and small teams, yes For the solo entrepreneur and small teams, really For the solo entrepreneur and small teams</p>
+      </div>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <div class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </div>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tariff-item">
+      <div class="tariff-item__text">
+        <h3 class="heading">Essentials</h3>
+        <p class="description">For the solo entrepreneur and small teams</p>
+      </div>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <div class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </div>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+            <li>
+              Benefit 4
+            </li>
+            <li>
+              Benefit 5
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tariff-item">
+      <div class="tariff-item__text">
+        <h3 class="heading">Essentials</h3>
+        <p class="description">For the solo entrepreneur and small teams</p>
+      </div>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p>&nbsp;</p>
+      </div>
+      <div class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </div>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tariff-item">
+      <div class="tariff-item__text">
+        <h3 class="heading">Essentials</h3>
+        <p class="description">For the solo entrepreneur and small teams</p>
+      </div>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <div class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </div>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+            <li>
+              Benefit 4
+            </li>
+            <li>
+              Benefit 5
+            </li>
+            <li>
+              Benefit 6
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="tariffs tariffs--3-items">
+    <div class="tariff-item">
+      <div class="tariff-item__text">
+        <h3 class="heading">Essentials 11</h3>
+        <p class="description">For the solo entrepreneur and small teams, yes For the solo entrepreneur and small teams, really For the solo entrepreneur and small teams</p>
+      </div>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <div class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </div>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tariff-item">
+      <div class="tariff-item__text">
+        <h3 class="heading">Essentials 12</h3>
+        <p class="description">For the solo entrepreneur and small teams</p>
+      </div>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <div class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </div>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+            <li>
+              Benefit 4
+            </li>
+            <li>
+              Benefit 5
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tariff-item">
+      <div class="tariff-item__text">
+        <h3 class="heading">Essentials 13</h3>
+        <p class="description">For the solo entrepreneur and small teams</p>
+      </div>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+      </div>
+      <div class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </div>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+            <li>
+              Benefit 4
+            </li>
+            <li>
+              Benefit 5
+            </li>
+            <li>
+              Benefit 6
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="tariffs tariffs--2-items">
+    <div class="tariff-item">
+      <div class="tariff-item__text">
+        <h3 class="heading">Essentials 11</h3>
+        <p class="description">For the solo entrepreneur and small teams, yes For the solo entrepreneur and small teams, really For the solo entrepreneur and small teams</p>
+      </div>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <div class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </div>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tariff-item">
+      <div class="tariff-item__text">
+        <h3 class="heading">Essentials 12</h3>
+        <p class="description">For the solo entrepreneur and small teams</p>
+      </div>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <div class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </div>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+            <li>
+              Benefit 4
+            </li>
+            <li>
+              Benefit 5
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="tariffs tariffs--1-items">
+    <div class="tariff-item">
+      <div class="tariff-item__text">
+        <h3 class="heading">Essentials 11</h3>
+        <p class="description">For the solo entrepreneur and small teams, yes For the solo entrepreneur and small teams, really For the solo entrepreneur and small teams</p>
+      </div>
+      <div class="tariff-item__price">
+        <p class="price">1.580 €</p>
+        <p class="early-bird-discount">jetzt Frühbucher-Rabatt</p>
+      </div>
+      <div class="tariff-item__button">
+        <button class="tariff-item__essentials-button">
+          Continue
+        </button>
+      </div>
+      <div class="tariff-item__additionals">
+        <div class="benefits tariff-item__benefits">
+          <ul>
+            <li>
+              Benefit 1
+            </li>
+            <li>
+              Benefit 2
+            </li>
+            <li>
+              Benefit 3
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
